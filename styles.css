@@ -44,3 +44,10 @@ footer {
     margin-right: -70px;
     padding: 8px 70px;
 }
+
+/* Media query to hide carousel text on smaller screens */
+@media (max-width: 768px) {
+    .carousel-text-container {
+        display: none;
+    }
+}
