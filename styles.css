@@ -1,10 +1,21 @@
 body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
     background: linear-gradient(135deg, rgba(135, 46, 110, 1), rgba(253, 244, 231, 1));
     background-attachment: fixed;
     scroll-behavior: smooth;
     scroll-padding: 100px;
     scroll-margin-top: 100px;
-    padding: 0 70px 0 70px;
+}
+
+.page-content {
+    flex: 1 0 auto;
+}
+
+.container-fluid {
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 .navbar-sticky {
@@ -40,14 +51,16 @@ section {
 footer {
     background-color: white;
     border-top: 1px solid rgba(135, 46, 110, 0.3);
-    margin-left: -70px;
-    margin-right: -70px;
-    padding: 8px 70px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 20px;
+    position: relative;
+    bottom: 0;
 }
 
-/* Media query to hide carousel text on smaller screens */
 @media (max-width: 768px) {
-    .carousel-text-container {
-        display: none;
+    .container-fluid, footer {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
